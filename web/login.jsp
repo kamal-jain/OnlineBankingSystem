@@ -9,7 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+        <title>Log in</title>
     </head>
     <body>
         <header>
@@ -20,11 +22,12 @@
             <nav> 
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="login.html">LOG IN</a></li>
+                    <li><a href="login.jsp">LOG IN</a></li>
                     <li><a href="openAccount.html">OPEN ACCOUNT</a></li>
                     <li><a href="interest.html">INTEREST PLANS</a></li>
                     <li><a href="career.html">CAREER</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="logout.jsp">LOG OUT</a></li>
                 </ul>
             </nav>
         </header>

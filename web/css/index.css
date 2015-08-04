@@ -1,0 +1,56 @@
+
+header {
+	border-bottom: 3px solid #800000;
+	padding: 1.5em 0;
+	background-image: -moz-linear-gradient(
+	    30deg, #800000 0%, #fffded 30%, white 50%, #fffded 80%, #800000 100%);
+	background-image: -webkit-linear-gradient(
+	    30deg, #800000 0%, #fffded 30%, white 50%, #fffded 80%, #800000 100%);
+	background-image: -o-linear-gradient(
+	    30deg, #800000 0%, #fffded 30%, white 50%, #fffded 80%, #800000 100%);
+	background-image: linear-gradient(
+	    30deg, #800000 0%, #fffded 30%, white 50%, #fffded 80%, #800000 100%);
+}
+nav {
+	clear: left;
+	margin: 0;
+	padding: 0;
+	border-bottom: 3px solid #800000;
+	background-color: #800000;
+}
+nav a{
+color:#fffded;
+text-decoration: none;
+}
+nav ul {
+	margin-left: 0;
+	margin-bottom: .5em;
+	list-style: none;
+	padding: .5em 2em 0 0;
+}
+nav li {
+	display: inline;
+	padding: 0 1.5em;
+	border-right: 2px solid #fffded;
+	font-weight: bold;
+}
+section h1{
+font-size:50px;
+}
+section article{
+float:right;
+}
+section article img {
+float:left;
+clear:left;
+}
+
+
+
+
+
+
+
+
+
+

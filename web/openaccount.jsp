@@ -9,54 +9,55 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+        <title>Open Account</title>
     </head>
     <body>
-        <div id="main">	
-            <div id="site_content">
-                <div id="site_heading">
-                    <h1>Online Crime Reporting</h1>	
-                    <h2>Proud to Serve</h2>  
-                </div><!--close site_heading-->
-                <div id="header">
-                    <div id="menubar">
-                        <ul id="menu">
-                            <li><a href="index.html">HOME</a></li>
-                    <li><a href="login.html">LOG IN</a></li>
-                    <li><a href="openaccount.jsp">OPEN ACCOUNT</a></li>
+        <header>
+            <img src="images/logo.jpg" alt="XYZ Bank" height="80">
+            <hgroup>
+                <h1>XYZ Bank Ltd.</h1>
+            </hgroup>
+            <nav> 
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="login.jsp">LOG IN</a></li>
+                    <li><a href="openAccount.html">OPEN ACCOUNT</a></li>
+                    <li><a href="interest.html">INTEREST PLANS</a></li>
                     <li><a href="career.html">CAREER</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
-                        </ul>
-                    </div><!--close menubar-->
-                </div><!--close header-->	  
+                    <li><a href="logout.jsp">LOG OUT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="content">
+            <div style="margin-left: 40px">
+                <form action="signup" method="post">
+                    <label for="fname">First Name:</label>
+                    <input type="text" name="fname" style="margin-left: 50px"><br/><br/>
+                    <label for="lname">Last name:</label>
+                    <input type="text" name="lname" style="margin-left: 55px"><br><br/>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" style="margin-left: 55px"><br><br/>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" style="margin-left: 60px"><br><br/>
+                    <label for="cpassword">Confirm Password:</label>
+                    <input type="password" name="cpassword" ><br><br/>
+                    <label for="email">Email Id:</label>     
+                    <input type="email" name="email" style="margin-left: 70px"><br><br/>
+                    <label for="phone">Phone :</label>
+                    <input type="tel" name="phone" style="margin-left: 80px"><br><br/>    
 
-                <div id="content">
-                    <div style="margin-left: 40px">
-                        <form action="signup" method="post">
-                            <label for="fname">First Name:</label>
-                            <input type="text" name="fname" style="margin-left: 50px"><br/><br/>
-                            <label for="lname">Last name:</label>
-                            <input type="text" name="lname" style="margin-left: 55px"><br><br/>
-                            <label for="username">Username:</label>
-                            <input type="text" name="username" style="margin-left: 55px"><br><br/>
-                            <label for="password">Password:</label>
-                            <input type="password" name="password" style="margin-left: 60px"><br><br/>
-                            <label for="cpassword">Confirm Password:</label>
-                            <input type="password" name="cpassword" ><br><br/>
-                            <label for="email">Email Id:</label>     
-                            <input type="email" name="email" style="margin-left: 70px"><br><br/>
-                            <label for="phone">Phone :</label>
-                            <input type="tel" name="phone" style="margin-left: 80px"><br><br/>    
+                    <input type="submit" value="Submit" id="submit">        
+                </form><br/><br/><br/>   
+            </div><!-- closing form_style tag-->      
+        </div><!-- closing content div-->      
+    </div><!--close site_content-->	
+    <footer id="footer">
+        <p>&copy; 2015, Lambton College, Kamal Jain</p>
+    </footer>
 
-                            <input type="submit" value="Submit" id="submit">        
-                        </form><br/><br/><br/>   
-                    </div><!-- closing form_style tag-->      
-                </div><!-- closing content div-->      
-            </div><!--close site_content-->	
-            <div id="footer">  
-                <p>&COPY; Web Site by Kamal Jain</p>
-            </div><!--close footer-->
-
-        </div><!--close main-->	
-    </body>
+</div><!--close main-->	
+</body>
 </html>
