@@ -1,20 +1,19 @@
+<%-- 
+    Document   : logout
+    Created on : Aug 4, 2015, 6:17:56 PM
+    Author     : User
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Log Out</title>
     </head>
     <body>
         <header>
-            <img src="images/logo.jpg" alt="XYZ Bank" height="80">
+        <img src="images/logo.jpg" alt="XYZ Bank" height="80">
             <hgroup>
                 <h1>XYZ Bank Ltd.</h1>
             </hgroup>
@@ -29,5 +28,6 @@ and open the template in the editor.
                 </ul>
             </nav>
         </header>
+        
     </body>
 </html>

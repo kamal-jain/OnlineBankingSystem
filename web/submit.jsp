@@ -12,6 +12,7 @@
         <title>Account Information</title>
     </head>
     <body>
+        <header>
         <img src="images/logo.jpg" alt="XYZ Bank" height="80">
             <hgroup>
                 <h1>XYZ Bank Ltd.</h1>
@@ -20,8 +21,7 @@
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="login.jsp">LOG IN</a></li>
-                    <li><a href="openAccount.html">OPEN ACCOUNT</a></li>
-                    <li><a href="interest.html">INTEREST PLANS</a></li>
+                    <li><a href="openAccount.jsp">OPEN ACCOUNT</a></li>
                     <li><a href="career.html">CAREER</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="logout.jsp">LOG OUT</a></li>
