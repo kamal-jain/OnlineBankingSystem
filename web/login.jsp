@@ -34,7 +34,7 @@
             <fieldset>
                 <legend><span>Log In</span></legend>
                 <label for="Account">
-                    Account number
+                    User Name
                     <input type="text" id="account" name="uid"  placeholder="Enetr your Account number"/>    
                 </label><br><br>
                 <label for="Account">

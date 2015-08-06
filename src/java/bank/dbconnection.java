@@ -27,8 +27,8 @@ public class dbconnection {
         }
 
         try {
-            String jdbc = "jdbc:mysql://localhost/mydatabase";
-            conn = DriverManager.getConnection(jdbc, "onlinebankingsystem", "");
+            String jdbc = "jdbc:mysql://localhost/onlinebankingsystem";
+            conn = DriverManager.getConnection(jdbc, "root", "");
         } catch (SQLException ex) {
             System.err.println("Failed to Connect: " + ex.getMessage());
         }

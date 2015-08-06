@@ -1,13 +1,10 @@
-package bank;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package bank;
 
-import bank.dbconnection;
-import bank.AccountHolder;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -20,9 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Kamal Jain
+ * @author User
  */
-public class OpenAccount extends HttpServlet {
+public class signup extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,20 +33,17 @@ public class OpenAccount extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        try {
+        try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet signup</title>");
+            out.println("<title>Servlet signup</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet signup at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
-        } finally {
-            out.close();
         }
     }
 
@@ -79,16 +73,17 @@ public class OpenAccount extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        //processRequest(request, response);
         String email = request.getParameter("email");
         String firstName = request.getParameter("fname");
         String lastName = request.getParameter("lname");
         String password = request.getParameter("password");
-        String cpassword = request.getParameter("cpassword");
+        //String cpassword = request.getParameter("cpassword");
         String username = request.getParameter("username");
 
         PrintWriter out = response.getWriter();
         if (email != null && firstName != null && lastName != null && password != null && username != null) {
-            if (password.equals(cpassword)) {
+            //if (password.equals(cpassword)) {
                 AccountHolder A = new AccountHolder(email, firstName, lastName, password, username);
                 dbconnection conn = new dbconnection();
                 Connection con = conn.getConnection();
@@ -114,10 +109,7 @@ public class OpenAccount extends HttpServlet {
             } else {
                 out.println("Password do not match");
             }
-        } else {
-
-            out.println("Please enter the values before submit");
-        }
+        
     }
 
     /**
@@ -129,4 +121,5 @@ public class OpenAccount extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 }

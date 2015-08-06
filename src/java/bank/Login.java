@@ -93,7 +93,7 @@ public class Login extends HttpServlet {
         }
         try {
             if (con != null) {
-                String query = "SELECT count(*) count FROM accountholder WHERE account = ? and password = ?";
+                String query = "SELECT count(*) count FROM accountholder WHERE username = ? and password = ?";
                 PreparedStatement stmt = con.prepareStatement(query);
                 stmt.setString(1, account);
                 stmt.setString(2, password);

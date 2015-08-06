@@ -32,7 +32,7 @@
         </header>
         <div id="content">
             <div style="margin-left: 40px">
-                <form action="OpenAccount" method="post">
+                <form action="signup" method="post">
                     <label for="fname">First Name:</label>
                     <input type="text" name="fname" style="margin-left: 50px"><br/><br/>
                     <label for="lname">Last name:</label>
