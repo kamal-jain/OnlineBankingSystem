@@ -26,7 +26,7 @@
                     <li><a href="openaccount.jsp">OPEN ACCOUNT</a></li>
                     <li><a href="career.html">CAREER</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="logout.jsp">LOG OUT</a></li>
+                    
                 </ul>
             </nav>
         </header>

@@ -31,59 +31,23 @@
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="login.jsp">LOG IN</a></li>
-                    <li><a href="openaccount.jsp">OPEN ACCOUNT</a></li>
                     <li><a href="career.html">CAREER</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="logout.jsp">LOG OUT</a></li>
+                    <li><a href="index.html">LOG OUT</a></li>
+                    <li><a href="account.jsp">Account Details</a></li>
                 </ul>
             </nav>
         </header>
 
         <h1> you are successfully logged in !</h1>
-        <%
-            String account = request.getParameter("uid");
-            String password = request.getParameter("password");
-            int count = 0;
-            dbconnection conn = new dbconnection();
-            Connection con = conn.getConnection();
-            response.setContentType("text/html");
-            PrintWriter out = response.getWriter();
-            if ((password.equals("admin") && account.equals("admin"))) {
-                response.sendRedirect("admin.jsp");
-            }
-            try {
-                if (con != null) {
-                    String query = "SELECT * FROM accountholder WHERE username = ? and password = ?";
-                    PreparedStatement stmt = con.prepareStatement(query);
-                    stmt.setString(1, account);
-                    stmt.setString(2, password);
-
-                    ResultSet rs = stmt.executeQuery();
-                    rs.next();
-                    count = rs.getInt("count");
-                    out.println(count);
-                    if (count == 1) {
-                        HttpSession session = request.getSession();
-                        session.setAttribute("username", account);
-                        response.sendRedirect("submit.jsp");
-                    } else {
-
-                        request.setAttribute("errorMessage", "Sorry Account number or Password are incorrect!");
-                        RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-                        rd.include(request, response);
-
-                    }
-                } else {
-                    out.println("Error in database connection");
-                }
-            } catch (SQLException e) {
-                out.println(e.getMessage());
-                out.println(e.getErrorCode());
-                out.println(e.getSQLState());
-
-            }
-
-
-        %>
+        <div> 
+            <table>
+                <tr><td>Account Number</td> <td>1234578</td></tr>
+                <tr> <td>First name</td> <td> Kamal </td>  </tr>
+                <tr> <td>Last Name</td><td>Jain </td> </tr>
+                <tr> <td>User name</td><td> kamal_jain</td> </tr>
+            </table>
+        </div>
+        
     </body>
 </html>
