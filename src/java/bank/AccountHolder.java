@@ -19,6 +19,8 @@ public class AccountHolder {
     String password;
     String username;
 
+    
+    /* definning constructor */
     public AccountHolder(String email, String firstName, String lastName, String password, String username) {
         this.uid= uid;
         this.email = email;
@@ -28,6 +30,8 @@ public class AccountHolder {
         this.username = username;
     }
 
+    /* Definning getters and setters */
+    
     public int getUid() {
         return uid;
     }

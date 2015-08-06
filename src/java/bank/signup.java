@@ -99,15 +99,17 @@ public class signup extends HttpServlet {
                         stmt.executeUpdate();
                         response.sendRedirect("index.html");
                         out.println("You have been successfully signed up");
+                        
+                        //inserts the data into datebase and assigns user a unique account number.
 
                     } else {
-                        out.println("Error in database connection");
+                        out.println("Error in database connection");// if there is error in database connection
                     }
                 } catch (SQLException e) {
-                    out.println("Something is wrong");
+                    out.println("Something is wrong");// if there anything wrong and complier is not able to understand 
                 }
             } else {
-                out.println("Password do not match");
+                out.println("Password do not match");// if the user's password does not match.
             }
         
     }

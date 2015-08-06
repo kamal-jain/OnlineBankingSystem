@@ -84,16 +84,18 @@ public class Login extends HttpServlet {
     String account = request.getParameter("uid");
         String password = request.getParameter("password");
         int count = 0;
-        dbconnection conn = new dbconnection();
+        dbconnection conn = new dbconnection();// definning database connection
         Connection con = conn.getConnection();
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         if ((password.equals("admin") && account.equals("admin"))) {
-            response.sendRedirect("admin.jsp");
+            response.sendRedirect("admin.jsp");// checking foe adimn login 
         }
         try {
             if (con != null) {
                 String query = "SELECT count(*) count FROM accountholder WHERE username = ? and password = ?";
+                // retriving username and password for login
+                
                 PreparedStatement stmt = con.prepareStatement(query);
                 stmt.setString(1, account);
                 stmt.setString(2, password);
@@ -107,6 +109,7 @@ public class Login extends HttpServlet {
                     session.setAttribute("username", account);
                     response.sendRedirect("submit.jsp");
                 } else {
+                    // if user enters a wrong password or username then it will redirect to login page
 
                     request.setAttribute("errorMessage", "Sorry Account number or Password are incorrect!");
                     RequestDispatcher rd = request.getRequestDispatcher("login.jsp");

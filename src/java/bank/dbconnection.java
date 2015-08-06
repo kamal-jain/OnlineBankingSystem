@@ -17,7 +17,7 @@ import java.sql.SQLException;
  * @author Kamal Jain
  */
 public class dbconnection {
-
+// defining database connection with mysql database.
     public Connection getConnection() {
         Connection conn = null;
         try {
@@ -27,6 +27,7 @@ public class dbconnection {
         }
 
         try {
+            // database name is onlinebanking system.
             String jdbc = "jdbc:mysql://localhost/onlinebankingsystem";
             conn = DriverManager.getConnection(jdbc, "root", "");
         } catch (SQLException ex) {
@@ -34,7 +35,7 @@ public class dbconnection {
         }
         return conn;
     }
-
+// checks for the duplicate name 
     public int checkingDuplicateUserName(String username) {
         int rowCount = 0;
         try {
@@ -51,7 +52,7 @@ public class dbconnection {
         }
         return rowCount;
     }
-
+// checks for duplicate email 
     public int checkingDuplicateEmailId(String email) {
         int rowCount = 0;
         try {
