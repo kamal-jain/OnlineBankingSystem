@@ -23,19 +23,19 @@
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="login.jsp">LOG IN</a></li>
-                    <li><a href="openAccount.jsp">OPEN ACCOUNT</a></li>
+                    <li><a href="openaccount.jsp">OPEN ACCOUNT</a></li>
                     <li><a href="career.html">CAREER</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="logout.jsp">LOG OUT</a></li>
                 </ul>
             </nav>
         </header>
-        <form action="submit.jsp">  
+        <form action="Login" method="post">  
             <fieldset>
                 <legend><span>Log In</span></legend>
                 <label for="Account">
                     Account number
-                    <input type="text" id="account" name="account"  placeholder="Enetr your Account number"/>    
+                    <input type="text" id="account" name="uid"  placeholder="Enetr your Account number"/>    
                 </label><br><br>
                 <label for="Account">
                     Password

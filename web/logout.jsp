@@ -9,6 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+    
         <title>Log Out</title>
     </head>
     <body>
@@ -21,7 +24,7 @@
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="login.jsp">LOG IN</a></li>
-                    <li><a href="openAccount.jsp">OPEN ACCOUNT</a></li>
+                    <li><a href="openaccount.jsp">OPEN ACCOUNT</a></li>
                     <li><a href="career.html">CAREER</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="logout.jsp">LOG OUT</a></li>

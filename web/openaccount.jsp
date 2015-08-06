@@ -23,7 +23,7 @@
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="login.jsp">LOG IN</a></li>
-                    <li><a href="openAccount.jsp">OPEN ACCOUNT</a></li>
+                    <li><a href="openaccount.jsp">OPEN ACCOUNT</a></li>
                     <li><a href="career.html">CAREER</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="logout.jsp">LOG OUT</a></li>
@@ -32,7 +32,7 @@
         </header>
         <div id="content">
             <div style="margin-left: 40px">
-                <form action="signup" method="post">
+                <form action="OpenAccount" method="post">
                     <label for="fname">First Name:</label>
                     <input type="text" name="fname" style="margin-left: 50px"><br/><br/>
                     <label for="lname">Last name:</label>
@@ -41,12 +41,10 @@
                     <input type="text" name="username" style="margin-left: 55px"><br><br/>
                     <label for="password">Password:</label>
                     <input type="password" name="password" style="margin-left: 60px"><br><br/>
-                    <label for="cpassword">Confirm Password:</label>
-                    <input type="password" name="cpassword" ><br><br/>
+                    
                     <label for="email">Email Id:</label>     
                     <input type="email" name="email" style="margin-left: 70px"><br><br/>
-                    <label for="phone">Phone :</label>
-                    <input type="tel" name="phone" style="margin-left: 80px"><br><br/>    
+                       
 
                     <input type="submit" value="Submit" id="submit">        
                 </form><br/><br/><br/>   
