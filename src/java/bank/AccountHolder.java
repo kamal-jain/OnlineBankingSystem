@@ -11,7 +11,7 @@ package bank;
  * @author Kamal Jain
  */
 public class AccountHolder {
-
+/* defining variables here */
     int uid;
     String email;
     String firstName;

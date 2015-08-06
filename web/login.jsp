@@ -35,11 +35,11 @@
                 <legend><span>Log In</span></legend>
                 <label for="Account">
                     User Name
-                    <input type="text" id="account" name="uid"  placeholder="Enetr your Account number"/>    
+                    <input type="text" id="account" name="uid"  placeholder="Enetr your Username"/>    
                 </label><br><br>
                 <label for="Account">
                     Password
-                    <input type="text" id="password" name="password" placeholder="Enter the password"/>    
+                    <input type="password" id="password" name="password" placeholder="Enter the password"/>    
                 </label>
             </fieldset>
             <fieldset id="submitbutton">

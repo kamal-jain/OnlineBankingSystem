@@ -22,7 +22,7 @@
     </head>
     <body>
 
-        <header>
+        <header><!-- header starts here-->
             <img src="images/logo.jpg" alt="XYZ Bank" height="80">
             <hgroup>
                 <h1>XYZ Bank Ltd.</h1>
@@ -36,16 +36,43 @@
                     <li><a href="index.html">LOG OUT</a></li>                    
                 </ul>
             </nav>
-        </header>
+        </header><!-- Header ends here -->
 
-        <h1> you are successfully logged in !</h1>
+        <h1><%= session.getAttribute("username") %> you are successfully logged in !</h1>
         <div> 
-            <table>
-                <tr><td>Account Number</td> <td>1234578</td></tr>
-                <tr> <td>First name</td> <td> Kamal </td>  </tr>
-                <tr> <td>Last Name</td><td>Jain </td> </tr>
-                <tr> <td>User name</td><td> kamal_jain</td> </tr>
+            <%
+                   dbconnection conn = new dbconnection();
+                   Connection con = conn.getConnection();    
+                   try {
+                        if(con != null) {
+                        
+                            String query = "SELECT uid,firstname,lastname,email FROM accountholder WHERE username = ?";
+                            PreparedStatement stmt = con.prepareStatement(query);
+                            stmt.setString(1, session.getAttribute("username").toString());
+                            ResultSet result1=stmt.executeQuery();
+                            if(result1.next()){
+                                
+                   %>
+            <h3>
+                   <table>
+                <tr><td>Account Number :</td><td> <%= result1.getInt("uid") %></td> </tr>
+                <tr> <td>First name :</td> <td> <%= result1.getString("firstname") %></td>  </tr>
+                <tr> <td>Last Name :</td><td> <%= result1.getString("lastname") %></td></tr>
+                <tr> <td>Email :</td><td> <%= result1.getString("email") %></td></tr>
             </table>
+            </h3>
+            <%                            
+                            }
+
+                ResultSet rs = stmt.executeQuery();
+                        
+                        }else { out.println("Error in database connection"); }
+                   }catch(Exception e) {
+                   
+                   }
+            %>
+            
+            
         </div>
         
     </body>
