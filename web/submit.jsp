@@ -33,8 +33,7 @@
                     <li><a href="login.jsp">LOG IN</a></li>
                     <li><a href="career.html">CAREER</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="index.html">LOG OUT</a></li>
-                    <li><a href="account.jsp">Account Details</a></li>
+                    <li><a href="index.html">LOG OUT</a></li>                    
                 </ul>
             </nav>
         </header>
